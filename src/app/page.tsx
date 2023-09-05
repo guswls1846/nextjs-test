@@ -4,6 +4,7 @@ import React from "react";
 import tw from "twin.macro";
 import { useDispatch, useSelector } from "@/lib/redux";
 import { decrement, increment } from "@/lib/redux/slices";
+import Link from "next/link";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -35,6 +36,10 @@ export default function Home() {
           +
         </Button>
       </Row>
+
+      <Link href={"/form"}>
+        <Button>Go Form Page</Button>
+      </Link>
     </Main>
   );
 }
