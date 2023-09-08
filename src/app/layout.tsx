@@ -1,10 +1,8 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
 import GlobalStyles from "@/styles/GlobalStyles";
 import StyledComponentsRegistry from "@/lib/registry";
 import { Providers } from "@/lib/providers";
-
-const inter = Inter({ subsets: ["latin"] });
+import { inter, roboto_mono } from "@/styles/fonts";
 
 export default function RootLayout({
   children,
@@ -13,8 +11,8 @@ export default function RootLayout({
 }) {
   return (
     <Providers>
-      <html lang="en">
-        <body className={inter.className}>
+      <html lang="en" className={`${inter.variable} ${roboto_mono.variable}`}>
+        <body>
           <StyledComponentsRegistry>
             <GlobalStyles />
             {children}
