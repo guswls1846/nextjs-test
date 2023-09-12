@@ -22,6 +22,7 @@ const customJestConfig = {
     "^@/styles/(.*)$": "<rootDir>/src/styles/$1",
     "^@/pages/(.*)$": "<rootDir>/src/pages/$1",
     "^@/app/(.*)$": "<rootDir>/src/app/$1",
+    "^@/lib/(.*)$": "<rootDir>/src/lib/$1",
   },
   transform: {
     "^.+\\.(js|jsx|ts|tsx|mjs)$": ["babel-jest", babelConfigStyledComponents],
