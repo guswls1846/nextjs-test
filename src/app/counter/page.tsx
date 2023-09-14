@@ -6,11 +6,20 @@ const CounterPage = () => {
   return (
     <div>
       <h3 data-testid={"counter"}>{count}</h3>
-      <button data-testid={"minus-button"} onClick={() => setCount((count)=>count - 1)}>
+      <button
+        data-testid={"minus-button"}
+        onClick={() => setCount((count) => count - 1)}
+      >
         -
       </button>
-      <button data-testid={"plus-button"} onClick={() => setCount((count)=>count  +1)}>
+      <button
+        data-testid={"plus-button"}
+        onClick={() => setCount((count) => count + 1)}
+      >
         +
+      </button>
+      <button data-testid={"on-off-button"} style={{ backgroundColor: "blue" }}>
+        on/off
       </button>
     </div>
   );
