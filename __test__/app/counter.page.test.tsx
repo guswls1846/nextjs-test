@@ -37,4 +37,11 @@ describe("Counter 페이지 테스트", () => {
     expect(CounterElement).toHaveTextContent("1");
   });
 
+  it('on/off 버튼 컬러는 파란색입니다. ',  () => {
+    render(<Counter />);
+    const onOffButton = screen.getByTestId("on-off-button");
+    expect(onOffButton).toHaveStyle("background-color: blue");
+    });
+
+
 });
