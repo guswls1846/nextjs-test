@@ -6,23 +6,14 @@ const CounterPage = () => {
   const [onOff, setOnOff] = useState(false);
   return (
     <div>
-      <h3 data-testid={"counter"}>{count}</h3>
-      <button
-        data-testid={"minus-button"}
-        onClick={() => setCount((count) => count - 1)}
-        disabled={onOff}
-      >
+      <h3>{count}</h3>
+      <button onClick={() => setCount((count) => count - 1)} disabled={onOff}>
         -
       </button>
-      <button
-        data-testid={"plus-button"}
-        onClick={() => setCount((count) => count + 1)}
-        disabled={onOff}
-      >
+      <button onClick={() => setCount((count) => count + 1)} disabled={onOff}>
         +
       </button>
       <button
-        data-testid={"on-off-button"}
         style={{ backgroundColor: "blue" }}
         onClick={() => setOnOff(!onOff)}
       >
