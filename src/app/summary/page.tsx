@@ -20,7 +20,9 @@ const SummaryPage = () => {
         주문 내역을 확인하고 결제에 동의합니다.
       </label>
       <br />
-      <button type="submit">결제하기</button>
+      <button type="submit" disabled={!isChecked}>
+        결제하기
+      </button>
     </form>
   );
 };
